@@ -4,15 +4,23 @@ import multiply from './multiply.js';
 import divide from './divide.js';
 
 const compute = (func) => {
-  const number1 = parseFloat(document.getElementById('number1').value);
-  const number2 = parseFloat(document.getElementById('number2').value);
+  const num1 = parseFloat(document.getElementById('number1').value);
+  const num2 = parseFloat(document.getElementById('number2').value);
   const answer = document.getElementById('answer');
 
   switch (func) {
-    case 'add': answer.textContent = add(number1, number2); break;
-    case 'subtract': answer.textContent = subtract(number1, number2); break;
-    case 'multiply': answer.textContent = multiply(number1, number2); break;
-    case 'divide': answer.textContent = divide(number1, number2); break;
+    case 'add': 
+      answer.textContent = `${num1} + ${num2} = ${add(num1, num2)}`;
+      break;
+    case 'subtract': 
+      answer.textContent = `${num1} - ${num2} = ${subtract(num1, num2)}`;
+      break;
+    case 'multiply':
+      answer.textContent = `${num1} \u00D7 ${num2} = ${multiply(num1, num2)}`;
+      break;
+    case 'divide':
+      answer.textContent = `${num1} \u00F7 ${num2} = ${divide(num1, num2)}`;
+      break;
   }
 };
 
