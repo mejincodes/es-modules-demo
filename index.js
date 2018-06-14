@@ -1,8 +1,14 @@
 import compute from './functions/compute.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('add').addEventListener('click', () => compute('add'));
-  document.getElementById('subtract').addEventListener('click', () => compute('subtract'));
-  document.getElementById('multiply').addEventListener('click', () => compute('multiply'));
-  document.getElementById('divide').addEventListener('click', () => compute('divide'));
+  const add = document.getElementById('add');
+  const subtract = document.getElementById('subtract');
+  const multiply = document.getElementById('multiply');
+  const divide = document.getElementById('divide');
+  const buttons = [add, subtract, multiply, divide];
+
+  buttons.forEach(button => button.addEventListener('click', (e) => {
+    buttons.forEach(button => button.classList.remove('active'));
+    compute(e, button.id);
+  }));
 });
