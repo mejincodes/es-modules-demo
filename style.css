@@ -1,0 +1,23 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+button,
+input[type="text"] {
+  font-size: 1.1em;
+  border: 2px gray solid;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+button {
+  background-color: lightgoldenrodyellow;
+  width: 40px;
+}
+
+input[type="text"] {
+  max-width: 100px;
+  background-color: rgb(193, 228, 240);
+}
